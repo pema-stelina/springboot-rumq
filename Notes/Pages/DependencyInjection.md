@@ -3,7 +3,7 @@
 
 ### What is a Component?
 
-Components in SpringBoot are classes defined by a annotation. Some important annotations are:
+Components in SpringBoot are classes defined by annotations. Some important annotations are:
 
 @Component -> detects beans automatically.
 @Service -> used to define business logic and operations.
