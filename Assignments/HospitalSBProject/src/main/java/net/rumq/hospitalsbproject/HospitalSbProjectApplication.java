@@ -33,6 +33,21 @@ public class HospitalSbProjectApplication {
         var lazyComponent = ctx.getBean("lazyComponent", LazyComponent.class);
         System.out.println(lazyComponent);
 
+        System.out.println("05 Show the prototype component");
+        var prototypeComponent = ctx.getBean(PrototypeComponent.class);
+        System.out.println(prototypeComponent);
+        var prototypeComponent2 = ctx.getBean(PrototypeComponent.class);
+        System.out.println(prototypeComponent2);
+
+        System.out.println("Prototype1==Prototype2 " + (prototypeComponent==prototypeComponent2));
+
+
+        System.out.println("08 Qualifier, Collection, Map Injection");
+        var qualifierAutowiredDI = ctx.getBean("qualifierAutowiredDI", QualifierAutowiredDI.class);
+        System.out.println("08: " + qualifierAutowiredDI);
+        System.out.println("08A : " + ctx.getBean("doctor", Doctor.class));
+        System.out.println("08B : " + ctx.getBean("nurse", Nurse.class));
+        System.out.println("08C : " + ctx.getBean("receptionist", Receptionist.class));
     }
 
 }
