@@ -22,10 +22,11 @@ public class QualifierAutowiredDI {
     @Qualifier("receptionist")
     private Staff staff3;
 
-
+    @Autowired
     private Collection<Staff> staff;
 
-    private Map<String, Staff> shapesMap;
+    @Autowired
+    private Map<String, Staff> staffMap;
 
     public QualifierAutowiredDI () {
         System.out.println("QualifierAutowiredDI");
@@ -37,6 +38,8 @@ public class QualifierAutowiredDI {
                 "staff1=" + staff1 +
                 ", staff2=" + staff2 +
                 ", staff3=" + staff3 +
+                ", staff=" + staff +
+                ", staffMap=" + staffMap +
                 '}';
     }
 }

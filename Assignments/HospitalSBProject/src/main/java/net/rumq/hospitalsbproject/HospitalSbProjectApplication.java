@@ -48,6 +48,13 @@ public class HospitalSbProjectApplication {
         System.out.println("08A : " + ctx.getBean("doctor", Doctor.class));
         System.out.println("08B : " + ctx.getBean("nurse", Nurse.class));
         System.out.println("08C : " + ctx.getBean("receptionist", Receptionist.class));
+
+
+        // Injecting a value from application.properties
+        var injectingValues = ctx.getBean("injectingValues", InjectingValues.class);
+        System.out.println(injectingValues);
     }
+
+
 
 }
