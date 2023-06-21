@@ -5,12 +5,70 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("StelinasComponent")
-@Scope("singleton")
-@Lazy(true)
+import javax.persistence.*;
+
+@Entity
+@Table(name="HOSPITALS")
 
 public class Hospital {
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long hospitalId = -1;
+    private String name;
+    private String city;
+
+    public Hospital(long hospitalId, String name, String city, EyeDepartment eyeDepartment, EarDepartment earDepartment) {
+        this.hospitalId = hospitalId;
+        this.name = name;
+        this.city = city;
+        this.eyeDepartment = eyeDepartment;
+        this.earDepartment = earDepartment;
+    }
+
+    public Hospital() {
+    }
+
+    public long getHospitalId() {
+        return hospitalId;
+    }
+
+    public void setHospitalId(long hospitalId) {
+        this.hospitalId = hospitalId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public EyeDepartment getEyeDepartment() {
+        return eyeDepartment;
+    }
+
+    public void setEyeDepartment(EyeDepartment eyeDepartment) {
+        this.eyeDepartment = eyeDepartment;
+    }
+
+    public EarDepartment getEarDepartment() {
+        return earDepartment;
+    }
+
+    public void setEarDepartment(EarDepartment earDepartment) {
+        this.earDepartment = earDepartment;
+    }
 
     @Autowired
     private EyeDepartment eyeDepartment;
@@ -22,6 +80,7 @@ public class Hospital {
         this.earDepartment=earDepartment;
 
     }
+
 
     @Override
     public String toString() {
