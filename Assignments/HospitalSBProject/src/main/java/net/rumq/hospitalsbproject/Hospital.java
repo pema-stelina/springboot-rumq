@@ -1,11 +1,10 @@
 package net.rumq.hospitalsbproject;
 
+import net.rumq.hospitalsbproject.firstPart.EarDepartment;
+import net.rumq.hospitalsbproject.firstPart.EyeDepartment;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="HOSPITALS")
@@ -19,12 +18,12 @@ public class Hospital {
     private String name;
     private String city;
 
-    public Hospital(long hospitalId, String name, String city, EyeDepartment eyeDepartment, EarDepartment earDepartment) {
+    public Hospital(long hospitalId, String name, String city) {
         this.hospitalId = hospitalId;
         this.name = name;
         this.city = city;
-        this.eyeDepartment = eyeDepartment;
-        this.earDepartment = earDepartment;
+//        this.eyeDepartment = eyeDepartment;
+//        this.earDepartment = earDepartment;
     }
 
     public Hospital() {

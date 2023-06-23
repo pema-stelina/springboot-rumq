@@ -3,7 +3,9 @@ package net.rumq.hospitalsbproject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class HospitalService {
@@ -11,27 +13,37 @@ public class HospitalService {
     private HospitalRepository hospitalRepository;
 
     public long getHospitalCount(){
-        return hospitalRepository.getHospitalCount();
+//        return getHospitalCount();
+        return hospitalRepository.count();
     }
 
-    public Hospital getHospital(long hospitalId){
-        return hospitalRepository.getHospital(hospitalId);
+    public Optional<Hospital> getHospital(long hospitalId){
+//        return getHospital();
+        return hospitalRepository.findById(hospitalId);
     }
 
     public List<Hospital> getHospitals(){
-        return hospitalRepository.getHospitals();
+//        return getHospitals();
+        List<Hospital> hospitals = new ArrayList<>();
+        hospitalRepository.findAll().forEach(hospitals::add);
+        return hospitals;
     }
 
     public void insertHospital(Hospital hospital){
-        hospitalRepository.insertHospital(hospital);
+//       hospitalRepository.insertHospital(hospital);
+        hospitalRepository.save(hospital);
     }
 
-    public void updateHospital(int id, String hospital){
-        hospitalRepository.updateHospital(id, hospital);
+    public void updateHospital(Long id, String hospitalName){
+//      hospitalRepository.delete(id, hospitalName);
+        Hospital h = hospitalRepository.findById(id).orElseThrow();
+        h.setName(hospitalName);
+        hospitalRepository.save(h);
     }
 
-    public void deleteHospital(int id){
-        hospitalRepository.deleteHospital(id);
+    public void deleteHospital(Long id){
+//        hospitalRepository.deleteHospital(id);
+        hospitalRepository.deleteById(id);
     }
 
 }

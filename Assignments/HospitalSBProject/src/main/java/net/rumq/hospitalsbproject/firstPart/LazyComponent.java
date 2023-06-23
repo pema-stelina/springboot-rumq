@@ -1,4 +1,4 @@
-package net.rumq.hospitalsbproject;
+package net.rumq.hospitalsbproject.firstPart;
 
 import org.springframework.stereotype.Component;
 import org.springframework.context.annotation.Lazy;
