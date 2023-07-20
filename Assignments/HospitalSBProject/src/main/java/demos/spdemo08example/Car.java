@@ -1,7 +1,7 @@
 package demos.spdemo08example;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Table(name="CARS")
 @Entity

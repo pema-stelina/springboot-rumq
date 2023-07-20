@@ -1,4 +1,4 @@
-package net.rumq.hospitalsbproject;
+package net.rumq.hospitalsbproject.databaseConnection;
 
 import org.springframework.data.repository.CrudRepository;
 

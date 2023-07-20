@@ -1,14 +1,11 @@
-package net.rumq.hospitalsbproject;
+package net.rumq.hospitalsbproject.databaseConnection;
 
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
 import jakarta.transaction.Transactional;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

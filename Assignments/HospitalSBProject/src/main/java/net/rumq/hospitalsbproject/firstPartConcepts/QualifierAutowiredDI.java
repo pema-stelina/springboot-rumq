@@ -1,4 +1,4 @@
-package net.rumq.hospitalsbproject.firstPart;
+package net.rumq.hospitalsbproject.firstPartConcepts;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

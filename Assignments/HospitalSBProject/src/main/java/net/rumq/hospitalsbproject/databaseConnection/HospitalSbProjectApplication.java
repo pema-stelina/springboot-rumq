@@ -1,4 +1,4 @@
-package net.rumq.hospitalsbproject;
+package net.rumq.hospitalsbproject.databaseConnection;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

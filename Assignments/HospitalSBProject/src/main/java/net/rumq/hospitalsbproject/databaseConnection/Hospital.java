@@ -1,7 +1,7 @@
-package net.rumq.hospitalsbproject;
+package net.rumq.hospitalsbproject.databaseConnection;
 
-import net.rumq.hospitalsbproject.firstPart.EarDepartment;
-import net.rumq.hospitalsbproject.firstPart.EyeDepartment;
+import net.rumq.hospitalsbproject.firstPartConcepts.EarDepartment;
+import net.rumq.hospitalsbproject.firstPartConcepts.EyeDepartment;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import jakarta.persistence.*;

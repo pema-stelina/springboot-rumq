@@ -1,4 +1,4 @@
-package net.rumq.hospitalsbproject;
+package net.rumq.hospitalsbproject.databaseConnection;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;

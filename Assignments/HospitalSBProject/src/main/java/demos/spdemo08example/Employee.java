@@ -1,6 +1,7 @@
 package demos.spdemo08example;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
 @Entity
