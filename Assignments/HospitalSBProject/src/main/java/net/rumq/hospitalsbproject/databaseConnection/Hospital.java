@@ -1,5 +1,6 @@
 package net.rumq.hospitalsbproject.databaseConnection;
 
+
 import net.rumq.hospitalsbproject.firstPartConcepts.EarDepartment;
 import net.rumq.hospitalsbproject.firstPartConcepts.EyeDepartment;
 import org.springframework.beans.factory.annotation.Autowired;
