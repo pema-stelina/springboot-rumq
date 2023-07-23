@@ -13,7 +13,7 @@ public class SeedDb {
     @PostConstruct
     public void init(){
         jdbcTemplate.update("insert into HOSPITALS (id, name, city) values (?, ?, ?)", new Object[]{1, "Mother Tereza", "Tirane"});
-        jdbcTemplate.update("insert into HOSPITALS (id, name, city) values (?, ?, ?)", new Object[]{2, "Mother Tereza", "Tirane"});
-        jdbcTemplate.update("insert into HOSPITALS (id, name, city) values (?, ?, ?)", new Object[]{3, "Mother Tereza", "Tirane"});
+        jdbcTemplate.update("insert into HOSPITALS (id, name, city) values (?, ?, ?)", new Object[]{2, "The Military Hospital", "Tirane"});
+        jdbcTemplate.update("insert into HOSPITALS (id, name, city) values (?, ?, ?)", new Object[]{3, "The American Hospital", "Fier"});
     }
 }
